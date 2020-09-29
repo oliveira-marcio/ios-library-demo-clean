@@ -12,7 +12,8 @@ import SwiftSoup
 protocol FirstView: class {
     var presenter: FirstViewPresenter! { get set }
     func display(text: String)
-    func display(image: Data?)
+    func display(image from: Data)
+    func display(image named: String)
 }
 
 class FirstViewPresenter {
@@ -20,6 +21,10 @@ class FirstViewPresenter {
     private(set) public var router: FirstViewRouter
     private(set) public var gateway: WebGateway
     private(set) public var imageLoader: ImageLoader
+
+    // Just to simplify the app. It should come from domain
+    public var imageUrl = "https://historiasinfantisabobrinha.files.wordpress.com/2016/06/blog3.jpg"
+    public var requestUrl = "http://yadayada"
 
     public init(
         view: FirstView,
@@ -34,12 +39,20 @@ class FirstViewPresenter {
     }
 
     func viewDidLoad() {
-        gateway.request(url: "http://yadayada") { data in
+        gateway.request(url: requestUrl) { data in
             self.view?.display(text: data ?? "Oops")
         }
 
-        imageLoader.getImage(from: "https://historiasinfantisabobrinha.files.wordpress.com/2016/06/blog3.jpg") { data in
-            self.view?.display(image: data)
+        imageLoader.getImage(from: imageUrl) { data in
+            if let data = data {
+                self.view?.display(image: data)
+            } else {
+                self.view?.display(image: "placeholder")
+            }
         }
+    }
+
+    func navigateToSecondView() {
+        router.navigateToSecondView(imageUrl: imageUrl)
     }
 }

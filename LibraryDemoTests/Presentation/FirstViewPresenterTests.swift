@@ -32,7 +32,23 @@ class FirstPresenterTests: XCTestCase {
         presenter.viewDidLoad()
 
         XCTAssertEqual(viewSpy.text, "String Test")
-        XCTAssertEqual(viewSpy.image, Data())
+        XCTAssertEqual(viewSpy.imageData, Data())
+    }
+
+    func test_it_should_request_given_url_from_gateway_when_presenter_did_load() {
+        presenter.requestUrl = "http://url"
+
+        presenter.viewDidLoad()
+
+        XCTAssertEqual(fakeGateway.url, "http://url")
+    }
+
+    func test_it_should_request_given_url_from_image_loader_when_presenter_did_load() {
+        presenter.imageUrl = "http://url"
+
+        presenter.viewDidLoad()
+
+        XCTAssertEqual(fakeImageLoader.url, "http://url")
     }
 
     func test_error_text_was_displayed_when_gateway_fails() {
@@ -41,5 +57,21 @@ class FirstPresenterTests: XCTestCase {
         presenter.viewDidLoad()
 
         XCTAssertEqual(viewSpy.text, "Oops")
+    }
+
+    func test_placeholder_image_was_displayed_when_image_loader_fails() {
+        fakeImageLoader.shouldFail = true
+
+        presenter.viewDidLoad()
+
+        XCTAssertEqual(viewSpy.imageName, "placeholder")
+    }
+
+    func test_it_should_navigate_to_second_view_passing_current_image_url() {
+        presenter.imageUrl = "http://url"
+
+        presenter.navigateToSecondView()
+
+        XCTAssertEqual(routerSpy.imageUrl, "http://url")
     }
 }

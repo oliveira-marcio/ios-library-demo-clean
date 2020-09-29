@@ -24,7 +24,7 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func nextView(_ sender: Any) {
-        presenter.router.navigateToSecondView()
+        presenter.navigateToSecondView()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,11 +38,11 @@ extension FirstViewController: FirstView {
         textView.text = text
     }
 
-    func display(image: Data?) {
-        if let image = image {
-            imageView.image = UIImage(data: image)
-        } else {
-            imageView.image = UIImage(named: "placeholder")
-        }
+    func display(image from: Data) {
+        imageView.image = UIImage(data: from)
+    }
+
+    func display(image named: String) {
+        imageView.image = UIImage(named: named)
     }
 }

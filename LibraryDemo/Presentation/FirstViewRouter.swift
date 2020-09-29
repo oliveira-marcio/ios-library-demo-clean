@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol FirstViewRouter: ViewRouter {
-    func navigateToSecondView()
+    func navigateToSecondView(imageUrl: String)
 }
 
 enum FirstViewSegue: String {
@@ -26,11 +26,11 @@ class FirstViewRouterImplementation: FirstViewRouter {
         self.firstViewController = firstViewController
     }
 
-    func navigateToSecondView() {
+    func navigateToSecondView(imageUrl: String) {
         DispatchQueue.main.async {
             self.firstViewController?.performSegue(
                 withIdentifier: FirstViewSegue.toSecondView.rawValue,
-                sender: nil
+                sender: imageUrl
             )
         }
     }
@@ -40,9 +40,10 @@ class FirstViewRouterImplementation: FirstViewRouter {
 
         switch segue.identifier {
         case FirstViewSegue.toSecondView.rawValue:
-            guard let secondViewController = segue.destination as? SecondViewController else { return }
+            guard let secondViewController = segue.destination as? SecondViewController,
+                let imageUrl = sender as? String else { return }
             let configurator = SecondViewConfiguratorImplementation()
-            configurator.configure(secondViewController: secondViewController)
+            configurator.configure(secondViewController: secondViewController, imageUrl: imageUrl)
         default: break
         }
     }

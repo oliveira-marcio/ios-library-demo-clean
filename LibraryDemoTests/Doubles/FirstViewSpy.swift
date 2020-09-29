@@ -12,13 +12,18 @@ class FirstViewSpy: FirstView {
     var presenter: FirstViewPresenter!
     
     var text: String?
-    var image: Data?
+    var imageData: Data?
+    var imageName: String?
 
     func display(text: String) {
         self.text = text
     }
 
-    func display(image: Data?) {
-        self.image = image
+    func display(image from: Data) {
+        self.imageData = from
+    }
+
+    func display(image named: String) {
+        self.imageName = named
     }
 }

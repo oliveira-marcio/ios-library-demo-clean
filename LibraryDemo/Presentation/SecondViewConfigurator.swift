@@ -11,11 +11,11 @@ import Foundation
 import Foundation
 
 protocol SecondViewConfigurator {
-    func configure(secondViewController: SecondViewController)
+    func configure(secondViewController: SecondViewController, imageUrl: String)
 }
 
 class SecondViewConfiguratorImplementation: SecondViewConfigurator {
-    func configure(secondViewController: SecondViewController) {
-
+    func configure(secondViewController: SecondViewController, imageUrl: String) {
+        print(imageUrl)
     }
 }

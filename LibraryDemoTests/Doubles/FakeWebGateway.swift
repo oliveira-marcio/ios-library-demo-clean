@@ -12,8 +12,10 @@ import Foundation
 class FakeWebGateway: WebGateway {
     var data: String?
     var shouldFail = false
+    var url: String?
 
     func request(url: String, completion: @escaping (String?) -> Void) {
+        self.url = url
         completion(shouldFail ? nil : data)
     }
 }

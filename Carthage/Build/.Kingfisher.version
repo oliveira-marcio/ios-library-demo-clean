@@ -1,14 +1,56 @@
 {
-  "commitish" : "5.15.4",
-  "iOS" : [
+  "Mac" : [
     {
-      "hash" : "38538814c26a7953bcde7d25244c409020e994f23dfc6bff68140469fa0c9743",
+      "hash" : "e0f1a64089e00f9441059d615aa9fd5d5626d1396a1022948e73b7211675a3a9",
       "name" : "Kingfisher",
       "linking" : "dynamic",
       "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
     },
     {
-      "hash" : "65738d5cff0000856f9c5c426893ed8ac639bfe8e63e590dc2db39e928ddc981",
+      "hash" : "1bb6886d2284929b65bc0986c7b1f8b1f44bb357f691064fde056d7449310f5f",
+      "name" : "KingfisherSwiftUI",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "watchOS" : [
+    {
+      "hash" : "68e49b16bb501f134dc3e6313a4df61213dae73949c128114fc7cda219befa09",
+      "name" : "Kingfisher",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "ff8329f65d5dac0502b23652daeafe470a356eefd0d6d5d2b1172cd7048e4ab2",
+      "name" : "KingfisherSwiftUI",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "c5fb85671dac3aebff48d3de6765ac152ea3c9da3a479259684c683f5821c30c",
+      "name" : "Kingfisher",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "28c946146ca67561ea9ce578ff97221fc526f4d3fd192a39648264703cdede5f",
+      "name" : "KingfisherSwiftUI",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "commitish" : "5.15.5",
+  "iOS" : [
+    {
+      "hash" : "663a2ef13a46da7d12e1cd4e64c69a69e26a1972cdfdd24d97e1c32ec4126971",
+      "name" : "Kingfisher",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "2bb917db35de2fcf484876df52bea9c8a4515e952fb9a2eb4ebfe27de763f337",
       "name" : "KingfisherSwiftUI",
       "linking" : "dynamic",
       "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"

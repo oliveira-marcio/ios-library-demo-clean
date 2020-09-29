@@ -11,22 +11,23 @@ import XCTest
 
 class FirstPresenterTests: XCTestCase {
 
-    var presenter: FirstPresenterImplementation!
-    var gateway: FakeWebGateway!
-    var imageLoader: FakeImageLoader!
+    var presenter: FirstViewPresenter!
+    var fakeGateway: FakeWebGateway!
+    var fakeImageLoader: FakeImageLoader!
+    var routerSpy: FirstViewRouterSpy!
     var viewSpy: FirstViewSpy!
 
     override func setUp() {
-        gateway = FakeWebGateway()
-        imageLoader = FakeImageLoader()
         viewSpy = FirstViewSpy()
-        presenter = FirstPresenterImplementation(gateway: gateway, imageLoader: imageLoader)
-        presenter.view = viewSpy
+        routerSpy = FirstViewRouterSpy()
+        fakeGateway = FakeWebGateway()
+        fakeImageLoader = FakeImageLoader()
+        presenter = FirstViewPresenter(view: viewSpy, router: routerSpy, gateway: fakeGateway, imageLoader: fakeImageLoader)
     }
 
     func test_text_and_image_were_displayed_when_presenter_did_load() {
-        gateway.data = "String Test"
-        imageLoader.data = Data()
+        fakeGateway.data = "String Test"
+        fakeImageLoader.data = Data()
 
         presenter.viewDidLoad()
 
@@ -35,7 +36,7 @@ class FirstPresenterTests: XCTestCase {
     }
 
     func test_error_text_was_displayed_when_gateway_fails() {
-        gateway.shouldFail = true
+        fakeGateway.shouldFail = true
 
         presenter.viewDidLoad()
 

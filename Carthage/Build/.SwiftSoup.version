@@ -1,8 +1,38 @@
 {
+  "Mac" : [
+    {
+      "hash" : "4378e7fc02401d4bb21e8996a54342f3655419912c2807d22198fde51f15af3d",
+      "name" : "SwiftSoup",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "4378e7fc02401d4bb21e8996a54342f3655419912c2807d22198fde51f15af3d",
+      "name" : "SwiftSoup",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "watchOS" : [
+    {
+      "hash" : "c1cb32a595f26f407436833c047383d115c68b1794c4877432221b726a51e106",
+      "name" : "SwiftSoup",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "ef616251420ddbcc0cbf699b76de8164587a7732bc7589775243a40dc5652379",
+      "name" : "SwiftSoup",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
   "commitish" : "2.3.2",
   "iOS" : [
     {
-      "hash" : "853777713703a2c12b3d7ecf24f61964100018293537a4ca47391e92506631b8",
+      "hash" : "688e74918c5e6b3fe00302fe5aae364259bb4ffd96adc1e5d7f53de09a8082dd",
       "name" : "SwiftSoup",
       "linking" : "dynamic",
       "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"

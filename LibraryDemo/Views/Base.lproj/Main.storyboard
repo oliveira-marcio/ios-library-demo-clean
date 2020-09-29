@@ -73,7 +73,7 @@
                     <connections>
                         <outlet property="imageView" destination="Ceq-Ok-oZM" id="mN5-Kc-YhC"/>
                         <outlet property="textView" destination="QDZ-Te-Ygs" id="c2p-KC-p3K"/>
-                        <segue destination="0Lm-Rx-BoH" kind="show" identifier="showSecondView" id="uNM-Jx-cjI"/>
+                        <segue destination="0Lm-Rx-BoH" kind="show" identifier="toSecondView" id="uNM-Jx-cjI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

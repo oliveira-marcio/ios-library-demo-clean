@@ -9,6 +9,8 @@
 import Foundation
 
 class FirstViewSpy: FirstView {
+    var presenter: FirstViewPresenter!
+    
     var text: String?
     var image: Data?
 

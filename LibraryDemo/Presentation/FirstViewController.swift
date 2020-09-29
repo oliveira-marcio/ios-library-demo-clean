@@ -11,27 +11,25 @@ import Kingfisher
 
 class FirstViewController: UIViewController {
 
+    var configurator = FirstViewConfiguratorImplementation()
+    var presenter: FirstViewPresenter!
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
 
-    var presenter = DependencyManager.firstPresenter
-    var navigator = DependencyManager.navigator
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        navigator.navigationController = self
-        presenter.view = self
+        configurator.configure(firstViewController: self)
         presenter.viewDidLoad()
     }
 
     @IBAction func nextView(_ sender: Any) {
-        navigator.navigateToSecondView()
+        presenter.router.navigateToSecondView()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        navigator.prepare(for: segue, sender: sender)
+        presenter.router.prepare(for: segue, sender: sender)
     }
 }
 

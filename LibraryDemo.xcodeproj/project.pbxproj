@@ -90,7 +90,6 @@
 		9CF58299251CC3B4002A0805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CF582A0251FFD5B002A0805 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		9CF582A1251FFD5B002A0805 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
-		9CF582A82520787B002A0805 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		9CF582AB2520794D002A0805 /* FirstViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewPresenter.swift; sourceTree = "<group>"; };
 		9CF582B12520C9A1002A0805 /* HtmlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlParser.swift; sourceTree = "<group>"; };
 		9CF582B32520CD6F002A0805 /* WebGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebGateway.swift; sourceTree = "<group>"; };
@@ -168,6 +167,27 @@
 			path = Doubles;
 			sourceTree = "<group>";
 		};
+		9CE1CC562523BD08004736CB /* First View */ = {
+			isa = PBXGroup;
+			children = (
+				9CA4F5DA2523927A006F07F5 /* FirstViewConfigurator.swift */,
+				9CA4F5DC252393BE006F07F5 /* FirstViewRouter.swift */,
+				9CF582AB2520794D002A0805 /* FirstViewPresenter.swift */,
+				9CF5828F251CC3B1002A0805 /* FirstViewController.swift */,
+			);
+			path = "First View";
+			sourceTree = "<group>";
+		};
+		9CE1CC572523BD1C004736CB /* Second View */ = {
+			isa = PBXGroup;
+			children = (
+				9CA4F5E025239710006F07F5 /* SecondViewConfigurator.swift */,
+				9CE1CC522523B93D004736CB /* SecondViewPresenter.swift */,
+				9CF582B72520DEF7002A0805 /* SecondViewController.swift */,
+			);
+			path = "Second View";
+			sourceTree = "<group>";
+		};
 		9CF5827F251CC3B0002A0805 = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				9CB9AE672522663800194F2E /* LibraryDemoTests */,
-				9CF582A82520787B002A0805 /* Swinject.framework */,
 				9CF582A0251FFD5B002A0805 /* Kingfisher.framework */,
 				9CF582A1251FFD5B002A0805 /* SwiftSoup.framework */,
 			);
@@ -225,13 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				9CA4F5DE2523941B006F07F5 /* ViewRouter.swift */,
-				9CA4F5DA2523927A006F07F5 /* FirstViewConfigurator.swift */,
-				9CA4F5DC252393BE006F07F5 /* FirstViewRouter.swift */,
-				9CF5828F251CC3B1002A0805 /* FirstViewController.swift */,
-				9CF582AB2520794D002A0805 /* FirstViewPresenter.swift */,
-				9CA4F5E025239710006F07F5 /* SecondViewConfigurator.swift */,
-				9CE1CC522523B93D004736CB /* SecondViewPresenter.swift */,
-				9CF582B72520DEF7002A0805 /* SecondViewController.swift */,
+				9CE1CC562523BD08004736CB /* First View */,
+				9CE1CC572523BD1C004736CB /* Second View */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";

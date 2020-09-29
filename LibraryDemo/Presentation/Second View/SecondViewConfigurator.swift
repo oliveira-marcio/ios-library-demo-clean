@@ -16,6 +16,11 @@ protocol SecondViewConfigurator {
 
 class SecondViewConfiguratorImplementation: SecondViewConfigurator {
     func configure(secondViewController: SecondViewController, imageUrl: String) {
-        print(imageUrl)
+        let presenter = SecondViewPresenter(
+            view: secondViewController,
+            imageLoader: SceneDelegate.appEnvironment.dependencies.imageLoader,
+            imageUrl: imageUrl)
+
+        secondViewController.presenter = presenter
     }
 }

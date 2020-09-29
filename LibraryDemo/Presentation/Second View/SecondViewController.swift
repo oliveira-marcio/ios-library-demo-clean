@@ -10,12 +10,22 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    var presenter: SecondViewPresenter!
+
     @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension SecondViewController: SecondView {
+    func display(image from: Data) {
+        imageView.image = UIImage(data: from)
     }
 
+    func display(image named: String) {
+        imageView.image = UIImage(named: named)
+    }
 }

@@ -11,17 +11,33 @@ import XCTest
 
 class SecondViewPresenterTests: XCTestCase {
 
-    var presenter: FirstViewPresenter!
-    var fakeGateway: FakeWebGateway!
+    var presenter: SecondViewPresenter!
     var fakeImageLoader: FakeImageLoader!
-    var routerSpy: FirstViewRouterSpy!
-    var viewSpy: FirstViewSpy!
+    var viewSpy: SecondViewSpy!
 
     override func setUp() {
+        viewSpy = SecondViewSpy()
+        fakeImageLoader = FakeImageLoader()
+        presenter = SecondViewPresenter(
+            view: viewSpy,
+            imageLoader: fakeImageLoader,
+            imageUrl: "http://url"
+        )
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_image_were_displayed_when_presenter_did_load() {
+        fakeImageLoader.data = Data()
+
+        presenter.viewDidLoad()
+
+        XCTAssertEqual(viewSpy.imageData, Data())
+    }
+
+    func test_placeholder_image_was_displayed_when_image_loader_fails() {
+        fakeImageLoader.shouldFail = true
+
+        presenter.viewDidLoad()
+
+        XCTAssertEqual(viewSpy.imageName, "placeholder")
     }
 }

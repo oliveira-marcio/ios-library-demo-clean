@@ -19,6 +19,8 @@
 		9CB9AE742522696200194F2E /* FirstViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9AE732522696200194F2E /* FirstViewSpy.swift */; };
 		9CB9AE7625226C0400194F2E /* FakeImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9AE7525226C0400194F2E /* FakeImageLoader.swift */; };
 		9CB9AE792522739200194F2E /* HtmlParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9AE782522739200194F2E /* HtmlParserTests.swift */; };
+		9CE1CC532523B93D004736CB /* SecondViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1CC522523B93D004736CB /* SecondViewPresenter.swift */; };
+		9CE1CC552523B9EC004736CB /* SecondViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1CC542523B9EC004736CB /* SecondViewSpy.swift */; };
 		9CF5828C251CC3B1002A0805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5828B251CC3B1002A0805 /* AppDelegate.swift */; };
 		9CF5828E251CC3B1002A0805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5828D251CC3B1002A0805 /* SceneDelegate.swift */; };
 		9CF58290251CC3B1002A0805 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5828F251CC3B1002A0805 /* FirstViewController.swift */; };
@@ -76,6 +78,8 @@
 		9CB9AE732522696200194F2E /* FirstViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewSpy.swift; sourceTree = "<group>"; };
 		9CB9AE7525226C0400194F2E /* FakeImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeImageLoader.swift; sourceTree = "<group>"; };
 		9CB9AE782522739200194F2E /* HtmlParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlParserTests.swift; sourceTree = "<group>"; };
+		9CE1CC522523B93D004736CB /* SecondViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewPresenter.swift; sourceTree = "<group>"; };
+		9CE1CC542523B9EC004736CB /* SecondViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewSpy.swift; sourceTree = "<group>"; };
 		9CF58288251CC3B0002A0805 /* LibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF5828B251CC3B1002A0805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CF5828D251CC3B1002A0805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				9CB9AE7525226C0400194F2E /* FakeImageLoader.swift */,
 				9CB9AE732522696200194F2E /* FirstViewSpy.swift */,
 				9CA4F5E225239FB6006F07F5 /* FirstViewRouterSpy.swift */,
+				9CE1CC542523B9EC004736CB /* SecondViewSpy.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				9CF5828F251CC3B1002A0805 /* FirstViewController.swift */,
 				9CF582AB2520794D002A0805 /* FirstViewPresenter.swift */,
 				9CA4F5E025239710006F07F5 /* SecondViewConfigurator.swift */,
+				9CE1CC522523B93D004736CB /* SecondViewPresenter.swift */,
 				9CF582B72520DEF7002A0805 /* SecondViewController.swift */,
 			);
 			path = Presentation;
@@ -385,6 +391,7 @@
 				9CF582B42520CD70002A0805 /* WebGateway.swift in Sources */,
 				9CB9AE7625226C0400194F2E /* FakeImageLoader.swift in Sources */,
 				9CA4F5E125239710006F07F5 /* SecondViewConfigurator.swift in Sources */,
+				9CE1CC552523B9EC004736CB /* SecondViewSpy.swift in Sources */,
 				9CA4F5DB2523927A006F07F5 /* FirstViewConfigurator.swift in Sources */,
 				9CF58290251CC3B1002A0805 /* FirstViewController.swift in Sources */,
 				9CA4F5E325239FB6006F07F5 /* FirstViewRouterSpy.swift in Sources */,
@@ -392,6 +399,7 @@
 				9CA4F5DF2523941B006F07F5 /* ViewRouter.swift in Sources */,
 				9CF582B82520DEF7002A0805 /* SecondViewController.swift in Sources */,
 				9CF5828C251CC3B1002A0805 /* AppDelegate.swift in Sources */,
+				9CE1CC532523B93D004736CB /* SecondViewPresenter.swift in Sources */,
 				9CF582AC2520794D002A0805 /* FirstViewPresenter.swift in Sources */,
 				9CA4F5D925238DE5006F07F5 /* AppEnvironment.swift in Sources */,
 				9CF5828E251CC3B1002A0805 /* SceneDelegate.swift in Sources */,

@@ -22,7 +22,12 @@ class FirstPresenterTests: XCTestCase {
         routerSpy = FirstViewRouterSpy()
         fakeGateway = FakeWebGateway()
         fakeImageLoader = FakeImageLoader()
-        presenter = FirstViewPresenter(view: viewSpy, router: routerSpy, gateway: fakeGateway, imageLoader: fakeImageLoader)
+        presenter = FirstViewPresenter(
+            view: viewSpy,
+            router: routerSpy,
+            gateway: fakeGateway,
+            imageLoader: fakeImageLoader
+        )
     }
 
     func test_text_and_image_were_displayed_when_presenter_did_load() {
